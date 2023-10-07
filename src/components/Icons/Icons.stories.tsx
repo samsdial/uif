@@ -1,29 +1,31 @@
-import { Meta, Story } from '@storybook/react';
-import React from 'react';
-import Icon, { ICON_SIZES, IconsProps } from './Icons'; // Asegúrate de que la importación sea correcta
-import VARIANTS from './variants';
+import React from "react";
+import Icon, { ICON_SIZES, IconsProps } from "./Icons";
+import VARIANTS from "./variants";
+import { Story, Meta } from "@storybook/react";
 
-export default {
-  title: 'Components/Icon', // El título de tu historia
-  component: Icon, // El componente que estás documentando
+const Template: Story<IconsProps> = (args: IconsProps) => <Icon {...args} />;
+
+export const Default: Story<IconsProps> = Template.bind({});
+Default.args = {
+  variantName: "access",
+  size: "medium",
+  color: "#000000",
+};
+
+const IconStories: Meta<IconsProps> = {
+  title: "Components/Icon",
+  component: Icon,
   argTypes: {
     variantName: {
-      options: Object.keys(VARIANTS), // Lista de opciones basada en tus variantes
-      control: { type: 'radio' }, // Puedes cambiar el tipo de control según tus necesidades
+      options: Object.keys(VARIANTS),
+      control: { type: "radio" },
     },
     size: {
-      options: Object.keys(ICON_SIZES), // Lista de opciones basada en tus tamaños
-      control: { type: 'radio' }, // Puedes cambiar el tipo de control según tus necesidades
+      options: Object.keys(ICON_SIZES),
+      control: { type: "radio" },
     },
-    color: { control: 'color' }, // Control de color para el color del ícono (opcional)
+    color: { control: "color" },
   },
-} as Meta;
-
-const Template: Story<IconsProps> = (args) => <Icon {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  variantName: 'access', // Variante por defecto
-  size: 'medium', // Tamaño por defecto
-  color: '#000000', // Color opcional
 };
+
+export default IconStories;

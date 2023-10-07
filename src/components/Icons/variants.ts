@@ -2,6 +2,7 @@ export const temp = [
     'access',
 ] as const;
 
+
 export const VARIANTS: any = {
     access: {
         name: 'access',

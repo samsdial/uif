@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,storybookjs
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,storybookjs
 
+# Distribution / packaging
+lib/
+
 ### react ###
 .DS_*
 *.log
