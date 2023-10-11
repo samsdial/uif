@@ -34,7 +34,7 @@ export const ListTableIcons: React.FC = () => {
             <td>
               <Icon variantName={variantName} size="xxlarge" color="#000000" />
             </td>
-            <td style={{ backgroundColor: "blue" }}>
+            <td style={{ backgroundColor: "#4687f1" }}>
               <Icon variantName={variantName} size="xxlarge" color="#fff" />
             </td>
           </tr>
