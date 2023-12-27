@@ -10,6 +10,7 @@ Default.args = {
   variantName: "access",
   size: "medium",
   color: "#000000",
+  className: "icon",
 };
 
 const IconStories: Meta<IconsProps> = {
@@ -25,6 +26,7 @@ const IconStories: Meta<IconsProps> = {
       control: { type: "radio" },
     },
     color: { control: "color" },
+    className: { control: "icon" },
   },
 };
 

@@ -23,12 +23,14 @@ export type IconsProps = {
   variantName: LIcon;
   size: keyof typeof SIZES;
   color?: string;
+  className?: string;
 };
 
 const Icon: React.FC<IconsProps> & { VARIANTS: typeof VARIANTS } = ({
   variantName,
   size,
   color,
+  className,
 }) => {
   const IconVariant = VARIANTS[variantName];
 
@@ -38,6 +40,7 @@ const Icon: React.FC<IconsProps> & { VARIANTS: typeof VARIANTS } = ({
       height={SIZES[size]}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg/"
+      className={className}
     >
       {IconVariant.path ? (
         IconVariant.path.map((data: any) => {
